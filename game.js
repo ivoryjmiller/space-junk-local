@@ -143,7 +143,7 @@ class Game {
     if (
       dist (
         this.mothership.physics.x,
-        this.mothership.physics.y
+        this.mothership.physics.y,
         junk.physics.x,
         junk.physics.y,
       ) <= pickupRadius
