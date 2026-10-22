@@ -142,10 +142,10 @@ class Game {
     const pickupRadius = Mothership.PICKUP_DIAMETER / 2;
     if (
       dist (
-        this.mothership.physics.x
+        this.mothership.physics.x,
         this.mothership.physics.y
-        junk.physics.x
-        junk.physics.y
+        junk.physics.x,
+        junk.physics.y,
       ) <= pickupRadius
     ) {
       junk.dropoffTime += delta;

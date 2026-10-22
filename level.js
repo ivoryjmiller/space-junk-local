@@ -60,11 +60,13 @@ class Level {
     //  - Lives: bottom left, one small Magpie for each spare life (lives - 1
     //    of them). Magpie.drawMagpie() draws around (0, 0), so translate and
     //    scale first.
-    for (let i = 0; i < lives - 1, i++)
+    for (let i = 0; i < lives - 1; i++) {
       push();
-      translate(
-        Level.LIVES_PAD_LEFT
-      )
+      translate(Level.LIVES_PAD_LEFT + i * Level.LIVES_GAP, height - Level.LIVES_PAD_BOTTOM);
+      scale(Level.LIVES_SCALE);
+      Magpie.drawMagpie({rotation: 0.2, beam: false});
+      pop();
+    }
 
     // junk
     for (const junk of this.junk) {
